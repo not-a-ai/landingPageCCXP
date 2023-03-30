@@ -119,6 +119,12 @@ width: 50%;
   cursor: pointer;
   width: 23%;
 }
+.cardSelect {
+  border: 5px solid #F3C61F;
+}
+.card-highlight {
+  box-shadow: 10px 10px 10px 10px grey;
+}
 button {
   background-color: #514988;
   border-radius: 10px;
@@ -138,3 +144,22 @@ button {
     background-color: #F3C61F;
     cursor: pointer;
   }
+
+input {
+  background-color: #514988;
+  border-radius: 10px;
+  color:#FFFFFF;
+  border: none;
+  height:70px;
+  width: 300px;
+  font-size: 30px;
+}
+
+#form {
+  background-color: #F3C61F;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 8rem;
+}

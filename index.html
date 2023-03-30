@@ -46,14 +46,22 @@
   <div id="p1">
     <p> AINDA DÁ TEMPO DE GARANTIR O SEU, MAS CORRE!</p>
     <div id="cards">
-      <img src="./qui.svg">
-      <img src="./sex.svg">
-      <img src="./sab.svg">
-      <img src="./dom.svg">
+      <img onmouseover="highlightCard('#quinta')" on onmouseout="highlightCard('#quinta')" onclick="selectCard('#quinta')" id="quinta" src="./qui.svg">
+      <img onmouseover="highlightCard('#sexta')" id="sexta" onmouseout="highlightCard('#sexta')" onclick="selectCard('#sexta')" src="./sex.svg">
+      <img onmouseover="highlightCard('#sabado')" 
+      id="sabado" onclick="selectCard('#sabado')" onmouseout="highlightCard('#sabado')" src="./sab.svg">
+      <img onmouseover="highlightCard('#domingo')" onclick="selectCard('#domingo')" onmouseout="highlightCard('#domingo')" id="domingo" src="./dom.svg">
     </div>
   </div>
-  <button type="button">GARANTA O SEU!</button>
+  <button onclick="showSelectedCards()" type="button">GARANTA O SEU!</button>
 </section>
+
+<div id="form">
+  <form>
+    <input type="email" placeholder="Seu email" required>
+    <input type="submit" >
+  </form>
+</div>
 <script src="script.js"></script>
 </body>
 </html>

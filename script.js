@@ -27,3 +27,57 @@ function formatoTempo(tempo) {
 
 countDown();
 setInterval(countDown, 1000)
+
+
+
+function highlightCard(selector) {
+  let element = document.querySelector(selector);
+  element.classList.toggle("card-highlight");
+}
+function addKeyboardEventListener() {
+  document.addEventListener("keydown", (event) => {
+    let ingresso1 = document.getElementById("quinta");
+    let ingresso2 = document.getElementById("sexta");
+    let ingresso3 = document.getElementById("sabado");
+    let ingresso4 = document.getElementById("domingo");
+
+    let code = event.code;
+    if (code == 'Digit1') {
+      ingresso1.classList.toggle("card-highlight");
+      ingresso2.classList.remove("card-highlight");
+      ingresso3.classList.remove("card-highlight");
+      ingresso4.classList.remove("card-highlight");
+    }
+    if (code == 'Digit2') {
+      ingresso1.classList.remove("card-highlight");
+      ingresso2.classList.toggle("card-highlight");
+      ingresso3.classList.remove("card-highlight");
+      ingresso4.classList.remove("card-highlight");
+    }
+    if (code == 'Digit3') {
+      ingresso1.classList.remove("card-highlight");
+      ingresso2.classList.remove("card-highlight");
+      ingresso3.classList.toggle("card-highlight");
+      ingresso4.classList.remove("card-highlight");}
+      
+      if (code == 'Digit4') {
+        ingresso1.classList.remove("card-highlight");
+        ingresso2.classList.remove("card-highlight");
+        ingresso3.classList.remove("card-highlight");
+        ingresso4.classList.toggle("card-highlight");
+      }}
+  )
+  }
+  addKeyboardEventListener();
+
+  let ingressos = [];
+
+  showSelectedCards = () => {
+    if(ingressos.length > 0) alert(`Ingressos selecionados:${ingressos}`);
+  }
+
+  selectCard = (selector) => {
+    var element = document.querySelector(selector);
+    element.classList.toggle("cardSelect");
+    if(ingressos.includes(selector)) ingressos.pop(selector); else ingressos.push(selector);
+  }
